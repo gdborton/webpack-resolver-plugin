@@ -1,0 +1,12 @@
+{
+  "name": "webpack-resolver-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node runTests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
