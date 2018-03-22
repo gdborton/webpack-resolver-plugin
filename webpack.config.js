@@ -9,7 +9,9 @@ module.exports = {
     filename: 'index.js',
     libraryTarget: 'commonjs2',
   },
-  plugins: [
-    new MySweetResolverPlugin(),
-  ],
+  resolve: {
+    plugins: [
+      new MySweetResolverPlugin(),
+    ],
+  },
 };

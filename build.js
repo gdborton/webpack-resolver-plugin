@@ -32,12 +32,12 @@ compiler.run((err, stats) => {
      * Stretch goal: make the resolver invalidate cached
      * requests when the mapping file changes.
      */
-    // fs.writeFileSync('./mapping', 'something:somethingelse');
-    // compiler.run((err2, stats) => {
-    //   const result2 = require('./dist/index.js');
-    //   const message2 = `Found ${result2.something} instead of somethingelse`;
-    //   assert.equal(result2.something, 'somethingelse', message2);
-    // });
+    fs.writeFileSync('./mapping', 'something:somethingelse');
+    compiler.run((err2, stats) => {
+      const result2 = require('./dist/index.js');
+      const message2 = `Found ${result2.something} instead of somethingelse`;
+      assert.equal(result2.something, 'somethingelse', message2);
+    });
   } catch(e) {
     process.exitCode = 1; // exit 1
     throw e; // rethrow to log
